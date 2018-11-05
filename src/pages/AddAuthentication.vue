@@ -107,7 +107,7 @@ export default {
           console.log('Err happens ' + err)
           this.pending = false
         } else {
-          let DIDAuthenticationChangedEvent = this.$store.state.contractInstance().DIDAuthenticationChanged(result => result.identity="0x7EbEE9a8A3530fd1e54017C39592A5a95af99d07")
+          let DIDAuthenticationChangedEvent = this.$store.state.contractInstance().DIDAuthenticationChanged(result => result.identity == "0x7EbEE9a8A3530fd1e54017C39592A5a95af99d07")
           console.log('no error happens. ')
           // var myResults = DIDAuthenticationChangedEvent.watch((err, result) => {
           //   if (err) {

@@ -1,19 +1,15 @@
 <template>
     <nav class="navbar is-transparent">
         <div class="navbar-brand">
-            <router-link class="navbar-item" to="/">
-                <img :src="logo" alt="">Home
+            <router-link class="navbar-item is-active" to="/">
+                <img :src="logo" alt=""> &nbsp;&nbsp; IDHub DID Register
             </router-link>
-
             <div class="navbar-burger burger" @click="isActiveToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
         <div class="navbar-menu" :class="{ 'is-active': isActive }">
             <div class="navbar-start is-hoverable">
                 <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>AddPublicKey</router-link>
@@ -22,8 +18,7 @@
                 <router-link class="navbar-item" to="/verifyauthentication" @click.native="isActiveToggle" exact>VerifyAuthentication</router-link>
             </div>
         </div>
-
-        <div class="navbar-end">
+        <!-- <div class="navbar-end">
             <div class="navbar-item">
                 <p class="control">
                     <table>
@@ -42,12 +37,9 @@
                         </tbody>
                     </table>
                 </p>
-
-                &nbsp;&nbsp;
-
                 <button class="button is-rounded is-small" v-if="auth" @click="logout">logout</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="navbar-end is-hoverable buttons has-addons">
             <button class="button is-rounded is-small" :disabled="isCurrent('zh_CN')" @click="set('zh_CN')">簡</button>

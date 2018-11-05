@@ -1,9 +1,13 @@
 <template>
-  <div id="app">
-    <NavBar></NavBar>
-    <router-view/>
-    <FooterBar></FooterBar>
-  </div>
+    <div id="app">
+        <NavBar></NavBar>
+        <section class="section">
+            <div class="container is-fluid">
+                <router-view/>
+            </div>
+        </section>
+        <FooterBar></FooterBar>
+    </div>
 </template>
 
 <script>
