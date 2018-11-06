@@ -1,44 +1,60 @@
 <template>
 <div>
-    <h1 class="title">Add PublicKey</h1>
-    <div>
-        <label> identity <small>address</small></label>
-        <input placeholder="0x314156..." v-model="identity">
+    <div class="container">
+      <h1 class="title">addPublicKey</h1>
+      <div class="panel">(addPublicKey function description here.)</div>
     </div>
-    <div>
-        <p>
-          <label> publicKeyType <small class="ng-binding"> bytes32 </small> </label>
-          <input type="text" placeholder="" v-model="publicKeyType">
-        </p>
+    <div class="container has-background-white second-container">
+        <div class="subtitle is-fluid">
+            <strong>WRITE</strong> IDHubDIDRegistry Contract: 0x1DbF8e4B47EA53a2b932850F7FEC8585C6A9c1d2
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> identity </strong>
+            <small class="has-text-grey"> address </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="0x3141592..." v-model="identity">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> publicKeyType </strong>
+            <small class="has-text-grey"> bytes32 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="publicKeyType">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong class="is-size-5"> publicKey </strong>
+            <small class="has-text-grey"> bytes32 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="publicKey">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> validity </strong>
+            <small class="has-text-grey"> uint256 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="validity">
+            </div>
+        </div>
+        <a class="subtitle button" name="button" @click="clickAddPublickKey">
+            AddPublicKey
+        </a>
     </div>
-    <div>
-        <p>
-          <label> publicKey <small> bytes32 </small> </label>
-          <input type="text" placeholder="" v-model="publicKey">
-        </p>
-    </div>
-    <div>
-        <p>
-          <label> validity <small> uint256 </small> </label>
-          <input type="text" placeholder="" v-model="validity">
-        </p>
-    </div>
-    <button type="button" name="button" @click="clickAddPublickKey">AddPublicKey</button>
-    <div class="temp">
-      ============ for test after this line =============
-      <p>identity is {{identity}}</p>
-      <p>publicKeyType is {{publicKeyType}}</p>
-      <p>publicKey is {{publicKey}}</p>
-      <p>validity is {{validity}}</p>
-    </div>
-    <div>
-      <p>Metamask: {{ web3.isInjected }}</p>
-      <p>Network: {{ web3.networkId }}</p>
-      <p>Account: {{ web3.coinbase }}</p>
-      <p>Balance: {{ web3.balance }}</p>
-    </div>
-
-  </div>
+        <!-- <div class="temp">
+          ============ for test after this line =============
+          <p>identity is {{identity}}</p>
+          <p>publicKeyType is {{publicKeyType}}</p>
+          <p>publicKey is {{publicKey}}</p>
+          <p>validity is {{validity}}</p>
+        </div>
+        <div>
+          <p>Metamask: {{ web3.isInjected }}</p>
+          <p>Network: {{ web3.networkId }}</p>
+          <p>Account: {{ web3.coinbase }}</p>
+          <p>Balance: {{ web3.balance }}</p>
+        </div>
+    </div> -->
+</div>
 </template>
 
 <script>
@@ -109,8 +125,13 @@ export default {
 </script>
 
 <style scoped>
-a.is-active {
-  border-bottom-color: #3273dc;
-  color: #3200dc;
+.container {
+  padding: 0rem 4rem 1rem 4rem;
+}
+.second-container {
+  padding: 1rem 4rem 2rem 4rem;
+}
+.subtitle {
+  line-height: 175%;
 }
 </style>

@@ -14,8 +14,8 @@
             <div class="navbar-start is-hoverable">
                 <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>AddPublicKey</router-link>
                 <router-link class="navbar-item" to="/addauthentication" @click.native="isActiveToggle" exact>AddAuthentication</router-link>
-                <router-link class="navbar-item" to="/verifypublickey" @click.native="isActiveToggle" exact>VerifyPublicKey</router-link>
-                <router-link class="navbar-item" to="/verifyauthentication" @click.native="isActiveToggle" exact>VerifyAuthentication</router-link>
+                <router-link class="navbar-item" to="/validpublickey" @click.native="isActiveToggle" exact>ValidPublicKey</router-link>
+                <router-link class="navbar-item" to="/validauthentication" @click.native="isActiveToggle" exact>ValidAuthentication</router-link>
             </div>
         </div>
         <!-- <div class="navbar-end">

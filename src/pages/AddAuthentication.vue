@@ -1,10 +1,47 @@
 <template>
-<span class="form-group">
-    <div>
-      <h1>Authentication Page: Add Authentication</h1>
+<div>
+    <div class="container">
+      <h1 class="title">addAuthentication</h1>
+      <div class="panel">(addPublicKey function description here.)</div>
     </div>
-    <!-- ngRepeat: input in contract.functions[contract.selectedFunc.index].inputs track by $index -->
-    <div>
+    <div class="container has-background-white second-container">
+        <div class="subtitle is-fluid">
+            <strong>WRITE</strong> IDHubDIDRegistry Contract: 0x1DbF8e4B47EA53a2b932850F7FEC8585C6A9c1d2
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> identity </strong>
+            <small class="has-text-grey"> address </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="0x3141592..." v-model="identity">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> authenticationType </strong>
+            <small class="has-text-grey"> bytes32 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="authenticationType">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong class="is-size-5"> authentication </strong>
+            <small class="has-text-grey"> bytes32 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="authentication">
+            </div>
+        </div>
+        <div class="subtitle is-fluid">
+            <strong> validity </strong>
+            <small class="has-text-grey"> uint256 </small>
+            <div class="control">
+                <input class="input" type="text" placeholder="" v-model="validity">
+            </div>
+        </div>
+        <a class="subtitle button" name="button" @click="clickAddAuthentication">
+            AddAuthentication
+        </a>
+    </div>
+
+    <!-- <div>
       <div>
         <div>
           <label> identity <small>address</small></label>
@@ -47,19 +84,10 @@
       </div>
     </div>
       ============ for test after this line =============
-      <p>identity is {{identity}}</p>
-      <p>authenticationType is {{authenticationType}}</p>
-      <p>authentication is {{authentication}}</p>
-      <p>validity is {{validity}}</p>
-    </div>
-    <div>
-      <p>Metamask: {{ web3.isInjected }}</p>
-      <p>Network: {{ web3.networkId }}</p>
-      <p>Account: {{ web3.coinbase }}</p>
-      <p>Balance: {{ web3.balance }}</p>
-    </div>
+    </div> -->
 
-  </span>
+
+</div>
 </template>
 
 <script>
@@ -154,4 +182,13 @@ export default {
 </script>
 
 <style>
+.container {
+  padding: 0rem 4rem 1rem 4rem;
+}
+.second-container {
+  padding: 1rem 4rem 2rem 4rem;
+}
+.subtitle {
+  line-height: 175%;
+}
 </style>
