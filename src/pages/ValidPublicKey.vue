@@ -38,7 +38,7 @@
             <label> {{validity}} </label>
           </p>
         </div>
-        <a class="subtitle button" name="button" @click="validPublicKey">
+        <a class="subtitle button is-info is-rounded" name="button" @click="validPublicKey">
             Valid
         </a>
     </div>
@@ -91,5 +91,13 @@ export default {
 </script>
 
 <style>
-
+.container {
+  padding: 0rem 4rem 1rem 4rem;
+}
+.second-container {
+  padding: 1rem 4rem 2rem 4rem;
+}
+.subtitle {
+  line-height: 175%;
+}
 </style>

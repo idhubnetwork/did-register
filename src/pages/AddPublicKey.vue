@@ -36,7 +36,7 @@
                 <input class="input" type="text" placeholder="" v-model="validity">
             </div>
         </div>
-        <a class="subtitle button" name="button" @click="clickAddPublickKey">
+        <a class="subtitle button is-info is-rounded" name="button" @click="clickAddPublickKey">
             AddPublicKey
         </a>
     </div>
@@ -108,15 +108,6 @@ export default {
               console.log(result)
             }
           })
-          // DIDPublicKeyChangedEvent.watch((err, result) => {
-          //   if (err) {
-          //     console.log('could not get event DIDPublicKeyChanged()')
-          //   } else {
-          //     this.changeEvent = result.args
-          //     this.pending = false
-          //     console.log('here changeEvent happens')
-          //   }
-          // })
         }
       })
     }

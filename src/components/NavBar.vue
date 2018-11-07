@@ -1,21 +1,22 @@
 <template>
-    <nav class="navbar is-transparent">
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <router-link class="navbar-item is-active" to="/">
-                <img :src="logo" alt=""> &nbsp;&nbsp; IDHub DID Register
+            <router-link class="navbar-item" to="/">
+                <img :src="logo" alt="">
+                <label class="has-text-white">&nbsp;&nbsp; IDHub DID Register</label>
             </router-link>
-            <div class="navbar-burger burger" @click="isActiveToggle">
+            <a role="button" class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActiveToggle">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </a>
         </div>
-        <div class="navbar-menu" :class="{ 'is-active': isActive }">
-            <div class="navbar-start is-hoverable">
-                <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>AddPublicKey</router-link>
-                <router-link class="navbar-item" to="/addauthentication" @click.native="isActiveToggle" exact>AddAuthentication</router-link>
-                <router-link class="navbar-item" to="/validpublickey" @click.native="isActiveToggle" exact>ValidPublicKey</router-link>
-                <router-link class="navbar-item" to="/validauthentication" @click.native="isActiveToggle" exact>ValidAuthentication</router-link>
+        <div id="navbarBasic" class="navbar-menu" :class="{ 'is-active': isActive }">
+            <div class="navbar-start">
+                <router-link class="navbar-item" to="/addpublickey" exact>AddPublicKey</router-link>
+                <router-link class="navbar-item" to="/addauthentication" exact>AddAuthentication</router-link>
+                <router-link class="navbar-item" to="/validpublickey" exact>ValidPublicKey</router-link>
+                <router-link class="navbar-item" to="/validauthentication" exact>ValidAuthentication</router-link>
             </div>
         </div>
         <!-- <div class="navbar-end">
@@ -59,8 +60,8 @@ export default {
         'coinbase'
     ], data() {
         return {
-            logo: logo,
-            isActive: false
+            isActive: false,
+            logo: logo
         }
     }, methods: {
         isActiveToggle() {
@@ -80,64 +81,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar {
-  background-color: #0c1854;
-  padding: 0 30px 0 30px;
-}
-
-.navbar-item,
-.navbar-link {
-  color: rgba($color: #ffffff, $alpha: 0.5);
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-a.navbar-link,
-a.navbar-item {
-  &:hover,
-  &.is-active {
-    color: #ffffff;
-  }
-}
-
-.navbar-menu {
-  .navbar-link,
-  .navbar-item {
-    &.is-active {
-      border-bottom: 1px solid;
-    }
-  }
-}
-
-.button {
-  background-color: transparent;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-:disabled {
-  background-color: #ffffff;
-  color: #0c1854;
-  opacity: 1;
-}
-
-.buttons {
-  margin: 20px 20px 10px 20px;
-}
-
-.navbar-burger {
-  color: #ffffff;
-}
-
-.navbar-menu {
-  &.is-active {
-    background-color: transparent;
-  }
-}
-
-p.control {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 10px;
-}
 </style>

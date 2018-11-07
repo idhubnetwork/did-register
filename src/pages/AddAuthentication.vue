@@ -36,57 +36,10 @@
                 <input class="input" type="text" placeholder="" v-model="validity">
             </div>
         </div>
-        <a class="subtitle button" name="button" @click="clickAddAuthentication">
+        <a class="subtitle button is-info is-rounded" name="button" @click="clickAddAuthentication">
             AddAuthentication
         </a>
     </div>
-
-    <!-- <div>
-      <div>
-        <div>
-          <label> identity <small>address</small></label>
-          <input placeholder="0x314156..." v-model="identity">
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <p>
-          <label> authenticationType <small class="ng-binding"> bytes32 </small> </label>
-          <input type="text" placeholder="" v-model="authenticationType">
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <p>
-          <label> authentication <small> bytes32 </small> </label>
-          <input type="text" placeholder="" v-model="authentication">
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <p>
-          <label> validity <small> uint256 </small> </label>
-          <input type="text" placeholder="" v-model="validity">
-        </p>
-      </div>
-    </div>
-    <button type="button" name="button" @click="clickAddAuthentication">AddAuthentication</button>
-    <div class="temp">
-    <div class="panel panel-default">
-      <div class="panel-heading">Event Watch: {{ contractName }}.{{ eventName }}</div>
-      <div class="panel-body">
-        <button type="button" class="btn btn-default" @click="watch">Watch</button>
-        <button type="button" class="btn btn-default" @click="clear">Clear</button>
-        <pre>{{ events }}</pre>
-      </div>
-    </div>
-      ============ for test after this line =============
-    </div> -->
-
-
 </div>
 </template>
 

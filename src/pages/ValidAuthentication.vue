@@ -38,7 +38,7 @@
             <label> {{validity}} </label>
           </p>
         </div>
-        <a class="subtitle button" name="button" @click="validAuthentication">
+        <a class="subtitle button is-info is-rounded" name="button" @click="validAuthentication">
             Valid
         </a>
     </div>
