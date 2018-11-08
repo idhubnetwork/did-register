@@ -1,22 +1,22 @@
 <template>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <router-link class="navbar-item" to="/">
                 <img :src="logo" alt="">
                 <label class="has-text-white">&nbsp;&nbsp; IDHub DID Register</label>
             </router-link>
-            <a role="button" class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActiveToggle">
+            <div class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActiveToggle">
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </div>
         </div>
         <div id="navbarBasic" class="navbar-menu" :class="{ 'is-active': isActive }">
-            <div class="navbar-start">
-                <router-link class="navbar-item" to="/addpublickey" exact>AddPublicKey</router-link>
-                <router-link class="navbar-item" to="/addauthentication" exact>AddAuthentication</router-link>
-                <router-link class="navbar-item" to="/validpublickey" exact>ValidPublicKey</router-link>
-                <router-link class="navbar-item" to="/validauthentication" exact>ValidAuthentication</router-link>
+            <div class="navbar-start is-hoverable">
+                <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>AddPublicKey</router-link>
+                <router-link class="navbar-item" to="/addauthentication" @click.native="isActiveToggle" exact>AddAuthentication</router-link>
+                <router-link class="navbar-item" to="/validpublickey" @click.native="isActiveToggle" exact>ValidPublicKey</router-link>
+                <router-link class="navbar-item" to="/validauthentication" @click.native="isActiveToggle" exact>ValidAuthentication</router-link>
             </div>
         </div>
         <!-- <div class="navbar-end">
@@ -81,4 +81,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  background-color: #0c1854;
+  padding: 0 30px 0 30px;
+}
+
+.navbar-item,
+.navbar-link {
+  color: rgba($color: #ffffff, $alpha: 0.5);
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+a.navbar-link,
+a.navbar-item {
+  &:hover,
+  &.is-active {
+    color: #ffffff;
+  }
+}
+
+.navbar-menu {
+  .navbar-link,
+  .navbar-item {
+    &.is-active {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+.button {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+:disabled {
+  background-color: #ffffff;
+  color: #0c1854;
+  opacity: 1;
+}
+
+.buttons {
+  margin: 20px 20px 10px 20px;
+}
+
+.navbar-burger {
+  color: #ffffff;
+}
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active{
+  background-color: transparent;
+}
+.navbar-menu {
+  background-color: transparent;
+}
+
+.navbar-item:hover {
+  background-color: transparent;
+}
 </style>

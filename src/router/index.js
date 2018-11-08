@@ -9,12 +9,12 @@ import ValidPublicKey from '@/pages/ValidPublicKey'
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass: 'is-active',
   routes: [
-    { path: '/', component: Index },
-    { path: '/addpublickey', component: AddPublicKey },
-    { path: '/addauthentication', component: AddAuthentication },
-    { path: '/validpublickey', component: ValidPublicKey },
-    { path: '/validauthentication', component: ValidAuthentication }
-
-  ]
+      { path: '/', component: Index },
+      { path: '/addpublickey', component: AddPublicKey },
+      { path: '/addauthentication', component: AddAuthentication },
+      { path: '/validpublickey', component: ValidPublicKey },
+      { path: '/validauthentication', component: ValidAuthentication }
+    ]
 })
