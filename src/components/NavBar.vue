@@ -3,7 +3,7 @@
         <div class="navbar-brand">
             <router-link class="navbar-item" to="/">
                 <img :src="logo" alt="">
-                <label class="has-text-white">&nbsp;&nbsp; IDHub DID Register</label>
+                <label class="has-text-white">&nbsp;&nbsp; {{ $t("message.brand") }}</label>
             </router-link>
             <div class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActiveToggle">
                 <span></span>
