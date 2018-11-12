@@ -1,6 +1,13 @@
 {
   "message": {
+    "title": "DID-注册工具",
     "brand": "IDHub DID 注册工具",
+    "addPublicKey": "添加公钥",
+    "addAuthentication": "添加授权",
+    "validPublicKey": "校验公钥",
+    "validAuthentication": "校验授权",
+    "addButton": "添加",
+    "validButton": "校验",
     "signin": "登入",
     "logout": "登出",
     "org-identity": "组织身份",

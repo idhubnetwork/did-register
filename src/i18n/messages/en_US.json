@@ -1,6 +1,13 @@
 {
   "message": {
+    "title": "did-register",
     "brand": "IDHub DID Register",
+    "addPublicKey": "AddPublicKey",
+    "addAuthentication": "AddAuthentication",
+    "validPublicKey": "ValidPublicKey",
+    "validAuthentication": "ValidAuthentication",
+    "addButton": "Add",
+    "validButton": "Valid",
     "signin": "Signin",
     "logout": "Logout",
     "org-identity": "Org. ID",

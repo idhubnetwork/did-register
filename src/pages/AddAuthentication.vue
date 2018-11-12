@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="container">
-      <h1 class="title">addAuthentication</h1>
+      <h1 class="title">{{ $t("message.addAuthentication") }}</h1>
       <div class="panel">(addPublicKey function description here.)</div>
     </div>
     <div class="container has-background-white second-container">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <a class="subtitle button is-info is-rounded" name="button" @click="clickAddAuthentication">
-            AddAuthentication
+            {{ $t("message.addButton") }}
         </a>
     </div>
 </div>

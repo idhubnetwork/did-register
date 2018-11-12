@@ -13,10 +13,15 @@
         </div>
         <div id="navbarBasic" class="navbar-menu" :class="{ 'is-active': isActive }">
             <div class="navbar-start is-hoverable">
-                <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>AddPublicKey</router-link>
-                <router-link class="navbar-item" to="/addauthentication" @click.native="isActiveToggle" exact>AddAuthentication</router-link>
-                <router-link class="navbar-item" to="/validpublickey" @click.native="isActiveToggle" exact>ValidPublicKey</router-link>
-                <router-link class="navbar-item" to="/validauthentication" @click.native="isActiveToggle" exact>ValidAuthentication</router-link>
+                <router-link class="navbar-item" to="/addpublickey" @click.native="isActiveToggle" exact>{{ $t("message.addPublicKey") }}</router-link>
+                <router-link class="navbar-item" to="/addauthentication" @click.native="isActiveToggle" exact>{{ $t("message.addAuthentication") }}</router-link>
+                <router-link class="navbar-item" to="/validpublickey" @click.native="isActiveToggle" exact>{{ $t("message.validPublicKey") }}</router-link>
+                <router-link class="navbar-item" to="/validauthentication" @click.native="isActiveToggle" exact>{{ $t("message.validAuthentication") }}</router-link>
+            </div>
+            <div class="navbar-end is-hoverable buttons has-addons">
+                <button class="button is-rounded is-small" :disabled="isCurrent('zh_CN')" @click="set('zh_CN')">简</button>
+                <button class="button is-rounded is-small" :disabled="isCurrent('zh_TW')" @click="set('zh_TW')">繁</button>
+                <button class="button is-rounded is-small" :disabled="isCurrent('en_US')" @click="set('en_US')">EN</button>
             </div>
         </div>
         <!-- <div class="navbar-end">
@@ -42,11 +47,7 @@
             </div>
         </div> -->
 
-        <!-- <div class="navbar-end is-hoverable buttons has-addons">
-            <button class="button is-rounded is-small" :disabled="isCurrent('zh_CN')" @click="set('zh_CN')">簡</button>
-            <button class="button is-rounded is-small" :disabled="isCurrent('zh_TW')" @click="set('zh_TW')">繁</button>
-            <button class="button is-rounded is-small" :disabled="isCurrent('en_US')" @click="set('en_US')">EN</button>
-        </div> -->
+
     </nav>
 </template>
 
@@ -58,12 +59,14 @@ export default {
     props: [
         'identity',
         'coinbase'
-    ], data() {
+    ],
+    data() {
         return {
             isActive: false,
             logo: logo
         }
-    }, methods: {
+    },
+    methods: {
         isActiveToggle() {
             this.isActive = !this.isActive
         }, logout() {
@@ -71,11 +74,30 @@ export default {
                 // document.cookie = 'IDHUB_IDENTITY=; Max-Age=-1'
                 location.href = '/'
             }).catch(err => console.log(err))
+        }, isCurrent(locale) {
+            return this.$i18n.locale === locale
+        }, set(locale) {
+            this.$i18n.locale = locale
+            localStorage.setItem('language', locale)
         }
-    }, computed: {
+    },
+    computed: {
         auth() {
             return document.cookie.indexOf('IDHUB_IDENTITY=') >= 0
         }
+    },
+    mounted () {
+        if (!localStorage.getItem('language')) {
+            this.$i18n.locale = 'en_US'
+        }
+        else {
+            this.$i18n.locale = localStorage.getItem('language')
+        }
+        // set title
+        window.document.title = this.$t("message.title")
+    }, updated () {
+      // set title
+      window.document.title = this.$t("message.title")
     }
 }
 </script>

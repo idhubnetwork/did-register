@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="container">
-      <h1 class="title">validPublicKey</h1>
+      <h1 class="title">{{ $t("message.validPublicKey") }}</h1>
       <div class="panel">(validPublicKey function description here.)</div>
     </div>
     <div class="container has-background-white second-container">
@@ -39,7 +39,7 @@
           </p>
         </div>
         <a class="subtitle button is-info is-rounded" name="button" @click="validPublicKey">
-            Valid
+            {{ $t("message.validButton") }}
         </a>
     </div>
 </div>

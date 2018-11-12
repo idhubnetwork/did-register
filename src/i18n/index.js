@@ -6,5 +6,6 @@ Vue.use(VueI18n)
 
 export default new VueI18n({
   locale: 'zh_CN',
-  messages
+  fallbackLocale: 'zh_CN',
+  messages: messages
 })

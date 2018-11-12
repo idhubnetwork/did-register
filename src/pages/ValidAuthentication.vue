@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="container">
-      <h1 class="title">validAuthentication</h1>
+      <h1 class="title">{{ $t("message.validAuthentication") }}</h1>
       <div class="panel">(validAuthentication function description here.)</div>
     </div>
     <div class="container has-background-white second-container">
@@ -39,7 +39,7 @@
           </p>
         </div>
         <a class="subtitle button is-info is-rounded" name="button" @click="validAuthentication">
-            Valid
+            {{ $t("message.validButton") }}
         </a>
     </div>
 </div>
