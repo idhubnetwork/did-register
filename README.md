@@ -1,30 +1,27 @@
-# did-register
+# Decentralized Identifier Register  (DID Register)
 
-> A Vue.js project
+DID Register is the explorer for [IDHub DID Registry](https://github.com/idhubnetwork/IDHub-DID-Registry). With metamask, you can shuttle in the DID World, such as [Login AWS](http://aws-demo.idhub.network). This repository is default connected to ethereum network depending on metamask.
 
-## Build Setup
+## Getting Started
 
-``` bash
+### Requirements
+
+- [Node.js](https://nodejs.org/en/)
+- [Vue](https://vuejs.org/)
+- [IDHub DID Registry](https://github.com/idhubnetwork/IDHub-DID-Registry)
+- [Metamask](https://metamask.io/)
+
+### Installation
+
+```
 # install dependencies
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+npm start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- [try it](http://127.0.0.1:8080/)
+
+## License
+[Apache License 2.0](https://gitlab.com/idhub/idp/blob/master/LICENSE)

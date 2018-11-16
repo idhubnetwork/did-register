@@ -4,6 +4,7 @@
             <router-link class="navbar-item" to="/">
                 <img :src="logo" alt="">
                 <label class="has-text-white">&nbsp;&nbsp; {{ $t("message.brand") }}</label>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             </router-link>
             <div class="navbar-burger burger" :class="{ 'is-active': isActive }" @click="isActiveToggle">
                 <span></span>
